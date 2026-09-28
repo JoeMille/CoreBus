@@ -1,0 +1,13 @@
+module CoreBus 
+{
+    struct SensorReading
+    {
+        @key string<64> sensor_id;
+
+        unsigned long long sequence_number;
+
+        long long captured_at_us;
+
+        double temperature_celcius;
+    };
+};

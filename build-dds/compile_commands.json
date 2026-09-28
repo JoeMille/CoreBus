@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/workspace/build-dds",
+  "command": "/usr/bin/c++ -DRTI_64BIT -DRTI_LINUX -DRTI_STATIC -DRTI_UNIX -I/workspace/generated -isystem /opt/rti.com/rti_connext_dds-7.7.0/include -isystem /opt/rti.com/rti_connext_dds-7.7.0/include/ndds -isystem /opt/rti.com/rti_connext_dds-7.7.0/include/ndds/hpp -O3 -DNDEBUG -o CMakeFiles/sensor_types.dir/generated/sensor.cxx.o -c /workspace/generated/sensor.cxx",
+  "file": "/workspace/generated/sensor.cxx",
+  "output": "CMakeFiles/sensor_types.dir/generated/sensor.cxx.o"
+},
+{
+  "directory": "/workspace/build-dds",
+  "command": "/usr/bin/c++ -DRTI_64BIT -DRTI_LINUX -DRTI_STATIC -DRTI_UNIX -I/workspace/generated -isystem /opt/rti.com/rti_connext_dds-7.7.0/include -isystem /opt/rti.com/rti_connext_dds-7.7.0/include/ndds -isystem /opt/rti.com/rti_connext_dds-7.7.0/include/ndds/hpp -O3 -DNDEBUG -o CMakeFiles/sensor_types.dir/generated/sensorPlugin.cxx.o -c /workspace/generated/sensorPlugin.cxx",
+  "file": "/workspace/generated/sensorPlugin.cxx",
+  "output": "CMakeFiles/sensor_types.dir/generated/sensorPlugin.cxx.o"
+},
+{
+  "directory": "/workspace/build-dds",
+  "command": "/usr/bin/c++ -DRTI_64BIT -DRTI_LINUX -DRTI_STATIC -DRTI_UNIX -I/workspace/include -I/workspace/generated -isystem /opt/rti.com/rti_connext_dds-7.7.0/include -isystem /opt/rti.com/rti_connext_dds-7.7.0/include/ndds -isystem /opt/rti.com/rti_connext_dds-7.7.0/include/ndds/hpp -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/sensor_simulator.dir/src/run_simulator.cpp.o -c /workspace/src/run_simulator.cpp",
+  "file": "/workspace/src/run_simulator.cpp",
+  "output": "CMakeFiles/sensor_simulator.dir/src/run_simulator.cpp.o"
+},
+{
+  "directory": "/workspace/build-dds",
+  "command": "/usr/bin/c++ -DRTI_64BIT -DRTI_LINUX -DRTI_STATIC -DRTI_UNIX -I/workspace/include -I/workspace/generated -isystem /opt/rti.com/rti_connext_dds-7.7.0/include -isystem /opt/rti.com/rti_connext_dds-7.7.0/include/ndds -isystem /opt/rti.com/rti_connext_dds-7.7.0/include/ndds/hpp -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/sensor_simulator.dir/src/simulated_sensor.cpp.o -c /workspace/src/simulated_sensor.cpp",
+  "file": "/workspace/src/simulated_sensor.cpp",
+  "output": "CMakeFiles/sensor_simulator.dir/src/simulated_sensor.cpp.o"
+}
+]

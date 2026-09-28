@@ -26,3 +26,22 @@ target_compile_options(sensor_simulator PRIVATE
 )
 
 target_link_libraries(sensor_simulator PRIVATE Threads::Threads)
+
+add_library(sensor_types
+    generated/sensor.cxx
+    generated/sensorPlugin.cxx
+    )
+
+target_include_directories(sensor_types PUBLIC generated)
+
+target_compile_features(sensor_types PUBLIC cxx_std_17)
+
+target_link_libraries(sensor_types PUBLIC RTIConnextDDS::cpp2_api)
+
+target_link_libraries(sensor_simulator PRIVATE sensor_types)
+
+# Find RTI's CMake helper in the installed SDK.
+list(APPEND CMAKE_MODULE_PATH "$ENV{NDDSHOME}/resource/cmake")
+
+# Load RTI's library targets, including cpp2_api.
+find_package(RTIConnextDDS REQUIRED)

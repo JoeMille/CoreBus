@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsensor_types.a CMakeFiles/sensor_types.dir/generated/sensor.cxx.o CMakeFiles/sensor_types.dir/generated/sensorPlugin.cxx.o
+/usr/bin/ranlib libsensor_types.a
