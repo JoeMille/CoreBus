@@ -2,6 +2,7 @@
 #include "reading.hpp"
 #include <cstdint>
 #include <string>
+#include <optional>
 
 class SimulatedSensor
 {
@@ -10,7 +11,7 @@ class SimulatedSensor
                         double initial_temperature_celcius);
 
         const std::string& id() const;
-        SensorReading read();
+        std::optional<SensorReading> read();
     private:
             std::string sensor_id_ {};
             double next_temperature_celcius_ {};

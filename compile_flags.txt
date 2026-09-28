@@ -1,6 +1,0 @@
--std=c++17
--Iinclude
--pthread
--Wall
--Wextra
--Wpedantic
