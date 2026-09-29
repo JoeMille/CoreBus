@@ -142,6 +142,19 @@ sensor_types/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_types.dir/build.make CMakeFiles/sensor_types.dir/build
 .PHONY : sensor_types/fast
 
+#=============================================================================
+# Target rules for targets named sensor_monitor
+
+# Build rule for target.
+sensor_monitor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sensor_monitor
+.PHONY : sensor_monitor
+
+# fast build rule for target.
+sensor_monitor/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_monitor.dir/build.make CMakeFiles/sensor_monitor.dir/build
+.PHONY : sensor_monitor/fast
+
 generated/sensor.o: generated/sensor.cxx.o
 .PHONY : generated/sensor.o
 
@@ -189,6 +202,30 @@ generated/sensorPlugin.s: generated/sensorPlugin.cxx.s
 generated/sensorPlugin.cxx.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_types.dir/build.make CMakeFiles/sensor_types.dir/generated/sensorPlugin.cxx.s
 .PHONY : generated/sensorPlugin.cxx.s
+
+src/run_monitor.o: src/run_monitor.cpp.o
+.PHONY : src/run_monitor.o
+
+# target to build an object file
+src/run_monitor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_monitor.dir/build.make CMakeFiles/sensor_monitor.dir/src/run_monitor.cpp.o
+.PHONY : src/run_monitor.cpp.o
+
+src/run_monitor.i: src/run_monitor.cpp.i
+.PHONY : src/run_monitor.i
+
+# target to preprocess a source file
+src/run_monitor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_monitor.dir/build.make CMakeFiles/sensor_monitor.dir/src/run_monitor.cpp.i
+.PHONY : src/run_monitor.cpp.i
+
+src/run_monitor.s: src/run_monitor.cpp.s
+.PHONY : src/run_monitor.s
+
+# target to generate assembly for a file
+src/run_monitor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_monitor.dir/build.make CMakeFiles/sensor_monitor.dir/src/run_monitor.cpp.s
+.PHONY : src/run_monitor.cpp.s
 
 src/run_simulator.o: src/run_simulator.cpp.o
 .PHONY : src/run_simulator.o
@@ -246,6 +283,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... sensor_monitor"
 	@echo "... sensor_simulator"
 	@echo "... sensor_types"
 	@echo "... generated/sensor.o"
@@ -254,6 +292,9 @@ help:
 	@echo "... generated/sensorPlugin.o"
 	@echo "... generated/sensorPlugin.i"
 	@echo "... generated/sensorPlugin.s"
+	@echo "... src/run_monitor.o"
+	@echo "... src/run_monitor.i"
+	@echo "... src/run_monitor.s"
 	@echo "... src/run_simulator.o"
 	@echo "... src/run_simulator.i"
 	@echo "... src/run_simulator.s"

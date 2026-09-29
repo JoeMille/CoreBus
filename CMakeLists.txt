@@ -45,3 +45,10 @@ list(APPEND CMAKE_MODULE_PATH "$ENV{NDDSHOME}/resource/cmake")
 
 # Load RTI's library targets, including cpp2_api.
 find_package(RTIConnextDDS REQUIRED)
+
+add_executable(sensor_monitor src/run_monitor.cpp)
+
+target_link_libraries(sensor_monitor PRIVATE
+    sensor_types
+    Threads::Threads
+)

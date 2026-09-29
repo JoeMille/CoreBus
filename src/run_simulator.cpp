@@ -1,5 +1,7 @@
 #include "sensor/reading.hpp"
 #include "sensor/simulated_sensor.hpp"
+#include "dds/dds.hpp"
+#include "sensor.hpp"
 
 #include <iostream>
 #include <chrono>
@@ -8,6 +10,20 @@
 
 int main()
 {
+    dds::domain::DomainParticipant participant{0};
+
+    dds::topic::Topic<CoreBus::SensorReading> topic{
+        participant,
+        "SensorReadings"
+    };
+
+    dds::pub::Publisher publisher{participant};
+
+    dds::pub::DataWriter<CoreBus::SensorReading> writer{
+        publisher, 
+        topic
+    };
+
     std::vector<SimulatedSensor> sensors;
 
     sensors.reserve(3);
@@ -30,6 +46,20 @@ int main()
             }
 
             const SensorReading& reading = *result;
+
+            CoreBus::SensorReading sample{};
+
+            sample.sensor_id = reading.sensor_id;
+            sample.sequence_number = reading.sequence_number;
+            sample.temperature_celcius = reading.temperature_celcius;
+
+            sample.captured_at_us = 
+                std::chrono::duration_cast<std::chrono::microseconds>(
+                    reading.captured_at.time_since_epoch()
+                ).count();
+            
+            writer.write(sample);
+
             std::cout
             << "sensor=" << reading.sensor_id
             << " sequence=" << reading.sequence_number

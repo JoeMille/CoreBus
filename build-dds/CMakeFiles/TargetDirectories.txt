@@ -1,4 +1,5 @@
 /workspace/build-dds/CMakeFiles/sensor_simulator.dir
 /workspace/build-dds/CMakeFiles/sensor_types.dir
+/workspace/build-dds/CMakeFiles/sensor_monitor.dir
 /workspace/build-dds/CMakeFiles/edit_cache.dir
 /workspace/build-dds/CMakeFiles/rebuild_cache.dir

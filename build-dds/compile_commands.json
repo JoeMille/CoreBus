@@ -22,5 +22,11 @@
   "command": "/usr/bin/c++ -DRTI_64BIT -DRTI_LINUX -DRTI_STATIC -DRTI_UNIX -I/workspace/include -I/workspace/generated -isystem /opt/rti.com/rti_connext_dds-7.7.0/include -isystem /opt/rti.com/rti_connext_dds-7.7.0/include/ndds -isystem /opt/rti.com/rti_connext_dds-7.7.0/include/ndds/hpp -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/sensor_simulator.dir/src/simulated_sensor.cpp.o -c /workspace/src/simulated_sensor.cpp",
   "file": "/workspace/src/simulated_sensor.cpp",
   "output": "CMakeFiles/sensor_simulator.dir/src/simulated_sensor.cpp.o"
+},
+{
+  "directory": "/workspace/build-dds",
+  "command": "/usr/bin/c++ -DRTI_64BIT -DRTI_LINUX -DRTI_STATIC -DRTI_UNIX -I/workspace/generated -isystem /opt/rti.com/rti_connext_dds-7.7.0/include -isystem /opt/rti.com/rti_connext_dds-7.7.0/include/ndds -isystem /opt/rti.com/rti_connext_dds-7.7.0/include/ndds/hpp -O3 -DNDEBUG -o CMakeFiles/sensor_monitor.dir/src/run_monitor.cpp.o -c /workspace/src/run_monitor.cpp",
+  "file": "/workspace/src/run_monitor.cpp",
+  "output": "CMakeFiles/sensor_monitor.dir/src/run_monitor.cpp.o"
 }
 ]

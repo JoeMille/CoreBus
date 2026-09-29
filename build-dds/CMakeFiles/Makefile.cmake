@@ -51,4 +51,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/sensor_simulator.dir/DependInfo.cmake"
   "CMakeFiles/sensor_types.dir/DependInfo.cmake"
+  "CMakeFiles/sensor_monitor.dir/DependInfo.cmake"
   )
